@@ -4,7 +4,7 @@ from django.shortcuts import render
 def main(request):
     return render(request, 'home_page/index.html')
 
-#buttons don'e work yet
+#buttons doesn't work yet
 def login(request):
     return (render, 'home_page/index.html')
 
