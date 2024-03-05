@@ -1,0 +1,20 @@
+
+/*Custom Styles*/
+
+html{
+    font-size: 100%;
+}
+
+:root{
+    --border-radius: 25px;
+}
+
+body{
+    font-family: Poppins;
+    width: 85%;
+    margin: auto;
+}
+
+img{
+    max-width: 50%;
+}

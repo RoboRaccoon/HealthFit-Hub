@@ -1,0 +1,43 @@
+/*nav {*/
+/*            display: flex;*/
+/*            justify-content: space-between;*/
+/*            align-items: center;*/
+/*            margin-right: 65px;*/
+/*            padding: 1em 2em;*/
+/*            background-color: #333;*/
+/*            color: #fff;*/
+/*            width: 100%;*/
+
+/*        }*/
+/*        nav img {*/
+/*            max-height: 100px;*/
+/*        }*/
+/*        nav ul {*/
+/*            list-style-type: none;*/
+/*            margin: 0;*/
+/*            padding: 0;*/
+/*            display: flex;*/
+/*            align-items: center;*/
+/*        }*/
+/*        nav ul li {*/
+/*            margin-right: 50px;*/
+/*        }*/
+/*        nav ul li:last-child {*/
+/*            margin-right: 0;*/
+/*        }*/
+/*        nav ul li a {*/
+/*            color: #fff;*/
+/*            text-decoration: none;*/
+/*        }*/
+/*        .signup-btn {*/
+/*            background-color: #bea71e;*/
+/*            color: white;*/
+/*            padding: 10px 20px;*/
+/*            border: none;*/
+/*            border-radius: 25px;*/
+/*            cursor: pointer;*/
+/*            text-decoration: none;*/
+/*        }*/
+/*        .signup-btn:hover {*/
+/*            background-color: #45a049;*/
+/*        }*/

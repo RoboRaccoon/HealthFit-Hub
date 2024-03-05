@@ -1,1 +1,2 @@
-# Health-Fuel-Hub
+# Wellness Whimsy Wizards
+
