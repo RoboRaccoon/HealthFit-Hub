@@ -16,7 +16,7 @@ body {
     line-height: 1;
 }
 .WelcomeText{
-    margin-top: 100px; /* Add margin to the top */
+    margin-top: 70px; /* Add margin to the top */
     margin-bottom: -10px; /* Add margin at the bottom to separate from the next element */
     font-size: 30px; /* Change the font size to your desired value */
     font-weight: bold;
@@ -29,7 +29,7 @@ body {
 
 .infoText{
     font-size: 9px; /* Change the font size to your desired value */
-    padding-bottom: 20px; /* Adjust the padding as needed */
+    padding-bottom: 50px; /* Adjust the padding as needed */
 }
 
 .submitButton{
@@ -117,4 +117,52 @@ img{
 
 footer {
     background-color: var(--blue);
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+.slogan{
+    color: white;
+    font-size: 12px;
+}
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section:last-child {
+    margin-right: 0;
+}
+
+.footer-section h3 {
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-media-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.social-media-section img {
+    margin-right: 10px;
 }
