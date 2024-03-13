@@ -7,6 +7,10 @@ html{
 
 :root{
     --border-radius: 25px;
+    --blue: #1C2D3D;
+    --yellow: #F2AF29;
+    --green: #72B480;
+    --white: #FFFFFF;
 }
 
 body{
@@ -17,4 +21,9 @@ body{
 
 img{
     max-width: 50%;
+}
+
+
+footer{
+    background-color: var(--blue);
 }
