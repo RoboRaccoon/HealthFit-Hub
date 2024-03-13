@@ -99,6 +99,7 @@ body{
 .nav-list a.current{
 	font-weight: bold;
 	color: var(--yellow);
+	text-transform: uppercase;
 }
 
 .welcome-sect{
