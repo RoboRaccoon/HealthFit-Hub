@@ -1,0 +1,120 @@
+
+
+
+:root{
+    --border-radius: 25px;
+    --blue: #1C2D3D;
+    --yellow: #F2AF29;
+    --green: #72B480;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: Poppins;
+    /*width: 85%;*/
+    /*margin: auto;*/
+    line-height: 1;
+}
+.WelcomeText{
+    margin-top: 100px; /* Add margin to the top */
+    margin-bottom: -10px; /* Add margin at the bottom to separate from the next element */
+    font-size: 30px; /* Change the font size to your desired value */
+    font-weight: bold;
+}
+
+.loginText{
+    font-size: 17px; /* Change the font size to your desired value */
+    font-weight: bold;
+}
+
+.infoText{
+    font-size: 9px; /* Change the font size to your desired value */
+    padding-bottom: 20px; /* Adjust the padding as needed */
+}
+
+.submitButton{
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.main {
+    font-size: 14px; /* Change the font size to your desired value */
+    line-height:1.5;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Align text to the center */
+    margin: 0;
+    font-size: 13px; /* Change the font size to your desired value */
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="checkbox"],
+form input[type="submit"] {
+    margin: 5px 0;
+}
+
+/* Adding styles to navigation to match with mobile mockup  */
+.nav-list{
+    display: flex;
+    flex-grow: 2;
+
+    justify-content: space-between; /* Align items with equal space between them */
+    align-items: center; /* Vertically center items */
+    text-align: center;
+
+    background-color: var(--blue);
+    /*padding: 1em;*/
+}
+
+/* Adding padding to Nav to give more spacing */
+.nav-list ul li{
+	padding: .3em;
+    display: flex;
+    align-items: center;
+}
+
+/* add nav styles to make it more readable */
+.nav-list a,
+.nav-list a:link,
+.nav-list a:visited{
+    display: flex;
+	text-decoration: none;
+	color: var(--white);
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.nav-list ul{
+    display: flex;
+	text-decoration: none;
+    list-style-type: none; /* Makes the marker invisible for unordered lists */
+    gap:15px; /* Controls the space between flex items vertically */
+    padding-top: 5px ;
+    padding-bottom: 5px ;
+    padding-right: 15px;
+    width: 80%;
+    font-size: 10px;
+}
+
+/* Adding hover and skew animation to navigation for better user interaction */
+.nav-list a:hover,
+.nav-list a:focus,
+.nav-list a.current{
+	font-weight: bold;
+	color: var(--yellow);
+	text-transform: uppercase;
+}
+
+img{
+	max-width: 50%;
+	height: auto;
+    margin-right: 10px;
+}
+
+
+footer {
+    background-color: var(--blue);
+}
