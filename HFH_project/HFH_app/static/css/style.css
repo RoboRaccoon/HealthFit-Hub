@@ -85,6 +85,8 @@ body{
 	text-decoration: none;
 	color: var(--white);
 	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .nav-list ul{
@@ -96,6 +98,7 @@ body{
 .nav-list a:focus,
 .nav-list a.current{
 	font-weight: bold;
+	color: var(--yellow);
 }
 
 .welcome-sect{
