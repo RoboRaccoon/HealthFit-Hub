@@ -103,7 +103,7 @@ form input[type="submit"] {
     gap:15px; /* Controls the space between flex items vertically */
     padding-top: 5px ;
     padding-bottom: 5px ;
-    padding-right: 15px;
+    padding-left:60px ;
     width: 80%;
     font-size: 10px;
     margin-left: auto; /* Push the items to the right */
