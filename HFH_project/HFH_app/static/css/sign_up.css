@@ -51,9 +51,12 @@ body {
 
 form input[type="text"]{
         width: 100%;
+        font-size: 19px; /* Change the font size to your desired value */
+
 }
 form input[type="password"]{
         width: 100%;
+        font-size: 19px; /* Change the font size to your desired value */
 }
 form input[type="checkbox"],
 form input[type="submit"] {
