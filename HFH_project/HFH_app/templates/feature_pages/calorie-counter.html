@@ -29,6 +29,18 @@
     This is where the calorie counter will be made.
 </p>
 
+<!-- The list of available foods -->
+<ul>
+{% for food in food_items %}
+    <li>
+        Name: {{ food.name }}
+        <br>
+        Calories: {{ food.calories }}
+        <br>
+    </li>
+{% endfor %}
+</ul>
+
 <footer>
         <div>
             <img src="/static/images/footer-logo.png" alt="place holder image">
