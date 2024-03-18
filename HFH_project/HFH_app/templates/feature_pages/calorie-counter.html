@@ -33,9 +33,11 @@
 <ul>
 {% for food in food_items %}
     <li>
-        Name: {{ food.name }}
+        {{ food.name }}
         <br>
-        Calories: {{ food.calories }}
+        {{ food.calories }} Calories
+        <br>
+        <button>Add to meal</button>
         <br>
     </li>
 {% endfor %}
