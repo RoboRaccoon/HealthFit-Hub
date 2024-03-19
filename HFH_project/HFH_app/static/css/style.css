@@ -55,13 +55,13 @@ table {
     --yellow: #F2AF29;
     --green: #72B480;
     --white: #FFFFFF;
+	--orange:#FF5722;
+	--gray: #8C8B92;
 
 }
 
 body{
     font-family: Poppins;
-    /*width: 85%;*/
-    /*margin: auto;*/
 	line-height: 1.5;
 
 }
@@ -94,24 +94,24 @@ body{
 	color: var(--white);
 	text-transform: uppercase;
 	font-weight: bold;
-    font-size: 16px; /* Adjust to your desired font size */
+    font-size: 16px;
 
 }
 
 .nav-list ul{
     display: flex;
 	text-decoration: none;
-    list-style-type: none; /* Makes the marker invisible for unordered lists */
-    gap:15px; /* Controls the space between flex items vertically */
+    list-style-type: none;
+    gap:15px;
     padding-top: 5px ;
     padding-bottom: 5px ;
     padding-left:60px ;
     width: 80%;
     font-size: 10px;
-    margin-left: auto; /* Push the items to the right */
+    margin-left: auto;
 }
 
-/* Adding hover and skew animation to navigation for better user interaction */
+
 .nav-list a:hover,
 .nav-list a:focus,
 .nav-list a.current{
@@ -119,6 +119,20 @@ body{
 	color: var(--yellow);
 	text-transform: uppercase;
 }
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+
+footer{
+    background-color: var(--blue);
+}
+
+/*Mobile Layouts*/
+
+/*Welcome section*/
 
 .welcome-sect{
 	background-image: url("../images/Banner.jpg");
@@ -133,11 +147,6 @@ body{
 	font-weight: bold;
 	margin-right: 200px;
 }
-
-
-/*Mobile Layouts*/
-
-/*Welcome section*/
 
 .welcome-sect{
 	padding-top: 4em;
@@ -183,12 +192,92 @@ body{
 	border-radius: 10px;
 	color: var(--white);
 }
-img{
-	max-width: 50%;
-	height: auto;
+
+/* Key Features section */
+
+.key-features{
+	padding-left: 2em;
+	margin-top: 4em;
+}
+.key-features h3{
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 400;
+	color: var(--green);
+	margin-bottom: 5px;
 }
 
-
-footer{
-    background-color: var(--blue);
+.key-features h2{
+	font-size: 24px;
+	text-align: center;
+	font-weight: bold;
 }
+
+.services-grid{
+	margin-top: 2em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+	justify-items: center;
+}
+
+.service{
+	padding-bottom: 1em;
+}
+
+.service h5{
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+/*Why Choose Us Section*/
+.why-choose-us .why-choose-us-sect{
+	padding: 2em;
+}
+
+.why-choose-us-sect h3{
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 400;
+	color: var(--green);
+	margin-bottom: 5px;
+}
+
+.why-choose-us-sect h2{
+	font-size: 24px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 5px;
+	line-height: 1.2;
+}
+
+.why-choose-us-sect span{
+	color: var(--yellow);
+}
+
+.why-choose-us-sect p{
+	line-height: 1.5;
+	color: var(--gray);
+}
+
+.stats{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+}
+
+.stat{
+	text-align: center;
+	border: solid 1px var(--gray);
+	width: 50%;
+	height: 50%;
+	padding: 1.5em;
+	border-radius: 10px;
+	margin: 1em;
+}
+
+.stat
+
