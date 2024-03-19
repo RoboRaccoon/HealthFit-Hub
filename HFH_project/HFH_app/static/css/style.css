@@ -50,7 +50,7 @@ table {
 /*Custom Styles*/
 
 :root{
-    --border-radius: 25px;
+    --border-radius: 2px;
     --blue: #1C2D3D;
     --yellow: #F2AF29;
     --green: #72B480;
@@ -126,8 +126,6 @@ body{
     background-repeat: no-repeat;
 	height: 40vh;
     /*background-position: left top;*/
-
-
 }
 
 .welcome-sect h1{
@@ -137,6 +135,54 @@ body{
 }
 
 
+/*Mobile Layouts*/
+
+/*Welcome section*/
+
+.welcome-sect{
+	padding-top: 4em;
+	padding-left: 2em;
+}
+
+.welcome-sect h1{
+	font-size: 38px;
+	font-weight: bold;
+	color: var(--white);
+	line-height: 1.3;
+}
+
+.welcome-sect span{
+	color: var(--yellow);
+}
+
+
+.welcome-sect p{
+	color: var(--white);
+	padding-right: 15em;
+	line-height: 1.5;
+}
+
+
+.welcome-sect div .login-btn{
+	background: rgb(138,185,205);
+	background: linear-gradient(135deg, rgba(138,185,205,1) 0%, rgba(114,180,128,1) 20%, rgba(138,211,126,1) 64%, rgba(251,188,5,1) 100%);
+}
+
+.welcome-sect .signup-btn{
+	border: solid 2px var(--white);
+	margin-left: 10px;
+}
+
+.call-to-action{
+	margin-top: 3em;
+}
+
+.call-to-action a{
+	padding: 1em 1.2em;
+	text-decoration: none;
+	border-radius: 10px;
+	color: var(--white);
+}
 img{
 	max-width: 50%;
 	height: auto;
