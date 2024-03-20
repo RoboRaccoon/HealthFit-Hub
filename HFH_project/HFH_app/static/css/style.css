@@ -1,0 +1,119 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Custom Styles*/
+
+:root{
+    --border-radius: 25px;
+    --blue: #1C2D3D;
+    --yellow: #F2AF29;
+    --green: #72B480;
+    --white: #FFFFFF;
+}
+
+body{
+    font-family: Poppins;
+    /*width: 85%;*/
+    /*margin: auto;*/
+	line-height: 1.5;
+
+}
+
+/* Adding styles to navigation to match with mobile mockup  */
+.nav-list{
+    text-align: center;
+    background-color: var(--blue);
+    /*padding: 1em;*/
+}
+
+/* Adding padding to Nav to give more spacing */
+.nav-list ul li{
+	padding: .3em;
+}
+
+/* add nav styles to make it more readable */
+.nav-list a,
+.nav-list a:link,
+.nav-list a:visited{
+	display: block;
+	text-decoration: none;
+	color: var(--white);
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.nav-list ul{
+	text-decoration: none;
+}
+
+/* Adding hover and skew animation to navigation for better user interaction */
+.nav-list a:hover,
+.nav-list a:focus,
+.nav-list a.current{
+	font-weight: bold;
+	color: var(--yellow);
+	text-transform: uppercase;
+}
+
+.welcome-sect{
+	background-image: url("../images/Banner.jpg");
+	 background-size: 100%;
+}
+
+
+img{
+	max-width: 50%;
+	height: auto;
+}
+
+
+footer{
+    background-color: var(--blue);
+}
