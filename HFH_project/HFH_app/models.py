@@ -9,3 +9,12 @@ class Food(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class FoodsEatenList(models.Model):
+    foodEaten = models.ManyToManyField(Food)
+
+    def __str__(self):
+        return self.foodEaten.name
+
+

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from . import models
+from django.shortcuts import redirect
 
 
 # Create your views here.
@@ -20,8 +21,24 @@ def help(request):
 
 
 def calorie_counter(request):
+    # get all foods from our database
     retrieved_food_items = models.Food.objects.all()
-    return render(request, "feature_pages/calorie-counter.html", {'food_items': retrieved_food_items})
+    # get all eaten foods from database
+    retrieved_eaten_foods = models.FoodsEatenList.objects.all()
+    return render(request, "feature_pages/calorie-counter.html", {'food_items': retrieved_food_items, 'foods_eaten': retrieved_eaten_foods })
+
+
+def add_eaten_food(request, food_id):
+    food = models.Food.objects.get(id=food_id)
+    foodAdded = models.FoodsEatenList()
+    foodAdded.save()
+    foodAdded.foodEaten.add()
+    foodAdded.save()
+    #foodAdded.foodEaten.add(food)
+    #foodAdded.save()
+    #print(food.id)
+    #print(food.name)
+    return redirect('calorie_counter')
 
 
 def profile(request):

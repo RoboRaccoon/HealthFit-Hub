@@ -29,6 +29,15 @@
     This is where the calorie counter will be made.
 </p>
 
+<!-- List of foods that user has -->
+<ul>
+    {% for eaten in foods_eaten %}
+    <li>
+        {{ eaten.foodsEaten }}
+    </li>
+    {% endfor %}
+</ul>
+
 <!-- The list of available foods -->
 <ul>
 {% for food in food_items %}
@@ -37,7 +46,7 @@
         <br>
         {{ food.calories }} Calories
         <br>
-        <button>Add to meal</button>
+        <a href="{% url 'add_eaten_food' food.id %}">Add to Eaten</a>
         <br>
     </li>
 {% endfor %}
