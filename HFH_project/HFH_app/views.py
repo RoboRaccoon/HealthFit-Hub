@@ -46,8 +46,10 @@ def login(request):
     return render(request, 'Login_pages/login.html')
 def sign_up(request):
   return render(request, 'Login_pages/sign_up.html')
-
-
+def sign_up_process(request):
+  return render(request, 'Login_pages/sign_up_process.html')
+def sign_up_done(request):
+  return render(request, 'Login_pages/sign_up_done.html')
 
 def privacy_policy(request):
   return render(request, 'legal_pages/privacy_policy.html')
