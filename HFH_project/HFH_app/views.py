@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import ProfileForm
 
 # Create your views here.
 def main(request):
@@ -24,7 +25,14 @@ def calorie_counter(request):
 
 
 def profile(request):
-    return render(request, "Login_pages/profile.html")
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            return render(request,'Login_pages/profile.html',{'form':form})
+    else:
+        form = ProfileForm()
+    return render(request, 'Login_pages/profile.html', {'profile_form': form})
+
 def login(request):
     return render(request, 'Login_pages/login.html')
 def sign_up(request):
@@ -39,6 +47,12 @@ def privacy_policy(request):
 def terms_of_service(request):
   return render(request, 'legal_pages/terms_of_service.html')
 
+def dashboard(request):
+    return render(request, "user-dashboard/dashboard.html")
+
+def premium(request):
+    return render(request, "user-dashboard/premium.html")
+
 
 #buttons doesn't work yet
 
@@ -46,3 +60,10 @@ def terms_of_service(request):
 #request to make new account
 def get_started(request):
     return render(request, 'home_page/index.html')
+
+
+
+
+
+
+
