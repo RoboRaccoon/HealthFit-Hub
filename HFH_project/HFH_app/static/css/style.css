@@ -437,4 +437,8 @@ footer{
 	.stat h4{
 		font-size: 30px;
 	}
+
+	.learn-more-container{
+		margin-top: 10em;
+	}
 }
