@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <link rel="stylesheet" href="/static/css/style.css">
+            <link rel="stylesheet" href="/static/css/nav+footer.css">
+
+    <title>Health Profile Form</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-list container">
+        <div>
+            <img src="/static/images/logo.png" alt="logo">
+        </div>
+        <ul>
+            <li><a href="/ "class = "current">Home</a></li>
+            <li><a href="/about_us">About Us</a></li>
+            <li><a href="/calorie_counter">Calorie Counter</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="/login" class = "current">Login</a></li>
+            <li><a href="/sign_up" >Sign Up</a></li>
+            <li><a href="/help">Help</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+    <form>
+        <fieldset>
+            <legend>Gender</legend>
+            <label>
+                <input type="radio" name="gender" value="female">
+                Female
+            </label>
+            <label>
+                <input type="radio" name="gender" value="male">
+                Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="prefer_not_to_say">
+                Prefer Not to Say
+            </label>
+            <label>
+                <input type="radio" name="gender" value="other">
+                Other
+            </label>
+        </fieldset>
+
+        <label for="height_ft">Height (ft):</label>
+        <input type="number" id="height_ft" name="height_ft" required>
+        <label for="height_in">Height (inches):</label>
+        <input type="number" id="height_in" name="height_in" required>
+
+        <label for="weight">Weight (lbs):</label>
+        <input type="number" id="weight" name="weight" required>
+
+        <label for="age">Age (years):</label>
+        <input type="number" id="age" name="age" required>
+
+        <fieldset>
+            <legend>Body Fat</legend>
+            <label>
+                <input type="radio" name="body_fat" value="low">
+                Low
+            </label>
+            <label>
+                <input type="radio" name="body_fat" value="medium">
+                Medium
+            </label>
+            <label>
+                <input type="radio" name="body_fat" value="high">
+                High
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>What is your goal?</legend>
+            <label>
+                <input type="checkbox" name="goal" value="lose_weight">
+                Lose Weight
+            </label>
+            <label>
+                <input type="checkbox" name="goal" value="maintain_weight">
+                Maintain Weight
+            </label>
+            <label>
+                <input type="checkbox" name="goal" value="build_muscle">
+                Build Muscle
+            </label>
+            <label>
+                <input type="checkbox" name="goal" value="eat_better">
+                Eat Better
+            </label>
+            <label>
+                <input type="checkbox" name="goal" value="track_calories">
+                Track Calories
+            </label>
+        </fieldset>
+
+        <button type="submit">Continue</button>
+    </form>
+
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <img src="/static/images/footer-logo.png" alt="place holder image">
+            <p class="slogan" >Eat, Track, Thrive!<br>Fuel Your Wellness Journey</p>
+        </div>
+        <div class="footer-section">
+            <h3>Information</h3>
+            <ul>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/about_us">About Us</a></li>
+                <li><a href="/contact_us">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Features</h3>
+            <ul>
+                <li><a href="/calorie_counter">Calorie Counter</a></li>
+                <li>Daily Tracking</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Security</h3>
+            <ul>
+                <li><a href="/terms_of_service">Terms Of Service</a></li>
+                <li><a href="/privacy_policy">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="social-media-section">
+        <span class="social-media">
+            <img src="/static/images/icons/instagram.svg" alt="instagram">
+            <img src="/static/images/icons/x.svg" alt="x">
+            <img src="/static/images/icons/facebook.svg" alt="facebook">
+            <img src="/static/images/icons/linkedin.svg" alt="linkedin">
+        </span>
+        <p>Copyright &copy; 2024 Health Fuel Hub</p>
+    </div>
+</footer>
+
+
+
+
+
+</body>
+</html>
