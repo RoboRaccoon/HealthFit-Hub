@@ -1,3 +1,4 @@
+
 # Team Name: Wellness Whimsy Wizards
 
 **Group Number:** 9
@@ -29,3 +30,4 @@ The element has been written, reviewed by at least 1 other team member, edited i
 
 **Product Goal:** 
 For our Product Goal, Health Fuel Hub is a web app that will allow clients to track their daily calorie intake. Clients will be able to sign up or login to track the type and amount of food that they have consumed which they would input. Then the application will be able to tell them how many calories they have eaten. Also, when signing up, they will be able to see ads that will be monetized and as well as see paid accounts on the web app.
+
