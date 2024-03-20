@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import ProfileForm
+from .models import Profile
 
 # Create your views here.
 def main(request):
@@ -25,13 +26,21 @@ def calorie_counter(request):
 
 
 def profile(request):
-    if request.method == 'POST':
-        form = ProfileForm(request.POST, request.FILES)
-        if form.is_valid():
-            return render(request,'Login_pages/profile.html',{'form':form})
-    else:
-        form = ProfileForm()
+    form = ProfileForm()
     return render(request, 'Login_pages/profile.html', {'profile_form': form})
+
+def update_profile(request, pk):
+    profile = get_object_or_404(Profile, pk=pk)
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('profile', pk=pk)
+    else:
+        form = ProfileForm(instance=profile)
+    return render(request, 'update_profile.html', {'form': form})
+
+
 
 def login(request):
     return render(request, 'Login_pages/login.html')
