@@ -136,28 +136,23 @@ footer{
 
 .welcome-sect{
 	background-image: url("../images/Banner.jpg");
-	background-size: auto 100%;
+	background-size: cover;
     background-repeat: no-repeat;
 	height: 40vh;
-    /*background-position: left top;*/
-}
-
-.welcome-sect h1{
-	font-size: 26px;
-	font-weight: bold;
-	margin-right: 200px;
+	background-position: left center;
 }
 
 .welcome-sect{
-	padding-top: 4em;
+	padding-top: 1em;
 	padding-left: 2em;
 }
 
 .welcome-sect h1{
-	font-size: 38px;
+	font-size: 32px;
 	font-weight: bold;
 	color: var(--white);
 	line-height: 1.3;
+	margin-right: 100px;
 }
 
 .welcome-sect span{
@@ -169,12 +164,14 @@ footer{
 	color: var(--white);
 	padding-right: 15em;
 	line-height: 1.5;
+	font-size: 12px;
 }
 
 
 .welcome-sect div .login-btn{
 	background: rgb(138,185,205);
 	background: linear-gradient(135deg, rgba(138,185,205,1) 0%, rgba(114,180,128,1) 20%, rgba(138,211,126,1) 64%, rgba(251,188,5,1) 100%);
+	font-weight: 500;
 }
 
 .welcome-sect .signup-btn{
@@ -183,7 +180,7 @@ footer{
 }
 
 .call-to-action{
-	margin-top: 3em;
+	margin-top: 2em;
 }
 
 .call-to-action a{
@@ -191,6 +188,7 @@ footer{
 	text-decoration: none;
 	border-radius: 10px;
 	color: var(--white);
+	font-size: 14px;
 }
 
 /* Key Features section */
@@ -205,13 +203,19 @@ footer{
 	text-align: center;
 	font-weight: 400;
 	color: var(--green);
-	margin-bottom: 5px;
+	margin-bottom: 20px;
 }
 
 .key-features h2{
-	font-size: 24px;
+	font-size: 28px;
 	text-align: center;
 	font-weight: bold;
+}
+
+.key-features .services-grid p{
+	line-height: 1.5;
+	color: var(--gray);
+	font-size: 12px;
 }
 
 .services-grid{
@@ -228,7 +232,7 @@ footer{
 
 .service h5{
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 16px;
 	margin-bottom: 5px;
 }
 
@@ -247,7 +251,7 @@ footer{
 }
 
 .why-choose-us-sect h2{
-	font-size: 24px;
+	font-size: 28px;
 	text-align: center;
 	font-weight: bold;
 	margin-bottom: 5px;
@@ -273,11 +277,164 @@ footer{
 	text-align: center;
 	border: solid 1px var(--gray);
 	width: 50%;
-	height: 50%;
 	padding: 1.5em;
 	border-radius: 10px;
 	margin: 1em;
 }
 
-.stat
+.stat h4{
+	font-size: 22px;
+	font-weight: bold;
+	color: var(--orange);
+	margin-bottom: 15px;
+}
 
+.stat h5{
+	font-size: 12px;
+}
+
+/*About Us*/
+
+.about-us{
+	padding: 2em;
+}
+
+.about-us img{
+	margin-bottom: 2em;
+	max-width: 100%;
+}
+
+.about-us h2{
+	font-size: 28px;
+	font-weight: bold;
+	margin-bottom: 0.75em;
+}
+
+.about-us p{
+	line-height: 1.5;
+	margin-bottom: 2em;
+}
+
+.learn-more-container{
+	text-align: right;
+}
+
+.about-us a{
+	text-decoration: none;
+	background-color: var(--green);
+	padding: 1em 1.2em;
+	color: var(--white);
+	border-radius: 10px;
+}
+
+@media screen and (min-width: 800px){
+	.welcome-sect{
+		height: 80vh;
+		background-position: left center;
+		padding-top: 2em;
+	}
+
+	.welcome-sect h1{
+		font-size: 56px;
+		margin-right: 350px;
+	}
+
+	.welcome-sect p{
+		font-size: 18px;
+		padding-right: 20em;
+	}
+
+	.welcome-sect a{
+		font-size: 22px;
+	}
+
+
+/*	Key Features */
+	.key-features h3{
+		font-size: 22px;
+	}
+
+	.about-us{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-content: space-around;
+		gap: 2em;
+	}
+
+	.about-us img{
+		margin: 0;
+	}
+}
+
+@media screen and (min-width: 1200px){
+
+	.welcome-sect{
+		height: 100vh;
+		padding-top: 6em;
+	}
+
+	.welcome-sect h1{
+		margin-right: 760px;
+	}
+
+	.welcome-sect p{
+		font-size: 20px;
+		margin-right: 500px;
+		margin-top: 1.5em;
+	}
+
+	.call-to-action{
+		margin-top: 7em;
+	}
+
+	.services-grid{
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	.service{
+		padding-top: 2em;
+	}
+
+	.service p{
+		font-size: 22px;
+	}
+
+	/*Why Choose Us*/
+
+	.why-choose-us{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-content: space-evenly;
+		justify-items: left;
+		/*gap: 5em;*/
+	}
+
+	/*.why-choose-us-sect{*/
+	/*	margin-left: 15em;*/
+	/*}*/
+
+	.why-choose-us img{
+		max-width: 100%;
+	}
+
+	.why-choose-us h3,
+	.why-choose-us h2{
+		text-align: left;
+	}
+
+	.stats{
+		justify-items: left;
+
+	}
+
+	.stat{
+		width: 200px;
+	}
+
+	.stat h5{
+		font-size: 18px;
+	}
+
+	.stat h4{
+		font-size: 30px;
+	}
+}
