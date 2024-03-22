@@ -35,7 +35,15 @@
     <li>
         {{ eaten.title }}
         {{ eaten.id }}
-        {{ eaten.foodEaten }}
+         <li>
+            {% for food in eaten.foodEaten.all %}
+                {{ food.name }}
+                <br>
+                {{ food.calories }} Calories
+                <br>
+                <a href="{% url 'delete_eaten_food' food.id %}">Delete</a>
+            {% endfor %}
+        </li>
     </li>
     {% endfor %}
 </ul>
