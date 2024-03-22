@@ -1,8 +1,7 @@
-from django.shortcuts import render, redirect, get_object_or_404
-
+from django.shortcuts import render
 from .forms import ProfileInfoForm, ProfileForm
-# from .forms import ProfileInfoForm
-from .models import Profile
+from . import models
+from django.shortcuts import redirect
 
 
 # Create your views here.
@@ -45,24 +44,20 @@ def profile(request):
         return render(request, 'Login_pages/profile.html', {'profile_form': form})
 
 
-# def update_profile(request, pk):
-#     profile = get_object_or_404(Profile, pk=pk)
-#     if request.method == 'POST':
-#         form = ProfileForm(request.POST, request.FILES, instance=profile)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('profile', pk=pk)
-#     else:
-#         form = ProfileForm(instance=profile)
-#     return render(request, 'update_profile.html', {'form': form})
-
-
 def login(request):
     return render(request, 'Login_pages/login.html')
 
 
 def sign_up(request):
     return render(request, 'Login_pages/sign_up.html')
+
+
+def sign_up_process(request):
+    return render(request, 'Login_pages/sign_up_process.html')
+
+
+def sign_up_done(request):
+    return render(request, 'Login_pages/sign_up_done.html')
 
 
 def privacy_policy(request):
@@ -79,6 +74,23 @@ def dashboard(request):
 
 def premium(request):
     return render(request, "user-dashboard/premium.html")
+
+
+def add_eaten_food(request, food_id):
+    food = models.Food.objects.get(id=food_id)
+    foodAdded = models.FoodsEatenList(id=1)
+    foodAdded.save()
+    foodAdded.foodEaten.add(food)
+    foodAdded.save()
+    print('This was the food added to list: ')
+    print(foodAdded.id)
+    print(foodAdded.foodEaten)
+    # foodAdded.foodEaten.add(food)
+    # foodAdded.save()
+    print("Food item info: ")
+    print(food.id)
+    print(food.name)
+    return redirect('calorie_counter')
 
 
 # buttons doesn't work yet

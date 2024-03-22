@@ -50,50 +50,68 @@ table {
 /*Custom Styles*/
 
 :root{
-    --border-radius: 25px;
+    --border-radius: 2px;
     --blue: #1C2D3D;
     --yellow: #F2AF29;
     --green: #72B480;
     --white: #FFFFFF;
+	--orange:#FF5722;
+	--gray: #8C8B92;
+
 }
 
 body{
     font-family: Poppins;
-    /*width: 85%;*/
-    /*margin: auto;*/
 	line-height: 1.5;
 
 }
 
-/* Adding styles to navigation to match with mobile mockup  */
 .nav-list{
+    display: flex;
+    flex-grow: 2;
+
+    justify-content: space-between; /* Align items with equal space between them */
+    align-items: center; /* Vertically center items */
     text-align: center;
+
     background-color: var(--blue);
     /*padding: 1em;*/
 }
 
 /* Adding padding to Nav to give more spacing */
 .nav-list ul li{
-	padding: .3em;
+	padding: .5em;
+    display: flex;
+    align-items: center;
 }
 
 /* add nav styles to make it more readable */
 .nav-list a,
 .nav-list a:link,
 .nav-list a:visited{
-	display: block;
+    display: flex;
 	text-decoration: none;
 	color: var(--white);
-	font-size: 18px;
 	text-transform: uppercase;
 	font-weight: bold;
+    font-size: 16px;
+
 }
 
 .nav-list ul{
+    display: flex;
 	text-decoration: none;
+    list-style-type: none;
+    gap:15px;
+    padding-top: 5px ;
+    padding-bottom: 5px ;
+    padding-left:60px ;
+    width: 80%;
+    font-size: 10px;
+    margin-left: auto;
 }
 
-/* Adding hover and skew animation to navigation for better user interaction */
+
 .nav-list a:hover,
 .nav-list a:focus,
 .nav-list a.current{
@@ -102,15 +120,43 @@ body{
 	text-transform: uppercase;
 }
 
-.welcome-sect{
-	background-image: url("../images/Banner.jpg");
-	 background-size: 100%;
+img{
+	max-width: 100%;
+	height: auto;
 }
 
 
-img{
-	max-width: 50%;
-	height: auto;
+footer{
+    background-color: var(--blue);
+}
+
+/*Mobile Layouts*/
+
+/*Welcome section*/
+
+.welcome-sect{
+	background-image: url("../images/Banner.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+	height: 40vh;
+	background-position: left center;
+}
+
+.welcome-sect{
+	padding-top: 1em;
+	padding-left: 2em;
+}
+
+.welcome-sect h1{
+	font-size: 32px;
+	font-weight: bold;
+	color: var(--white);
+	line-height: 1.3;
+	margin-right: 100px;
+}
+
+.welcome-sect span{
+	color: var(--yellow);
 }
 
 
@@ -234,3 +280,285 @@ button {
 }
 
 
+.welcome-sect p{
+	color: var(--white);
+	padding-right: 15em;
+	line-height: 1.5;
+	font-size: 12px;
+}
+
+
+.welcome-sect div .login-btn{
+	background: rgb(138,185,205);
+	background: linear-gradient(135deg, rgba(138,185,205,1) 0%, rgba(114,180,128,1) 20%, rgba(138,211,126,1) 64%, rgba(251,188,5,1) 100%);
+	font-weight: 500;
+}
+
+.welcome-sect .signup-btn{
+	border: solid 2px var(--white);
+	margin-left: 10px;
+}
+
+.call-to-action{
+	margin-top: 2em;
+}
+
+.call-to-action a{
+	padding: 1em 1.2em;
+	text-decoration: none;
+	border-radius: 10px;
+	color: var(--white);
+	font-size: 14px;
+}
+
+/* Key Features section */
+
+.key-features{
+	padding-left: 2em;
+	margin-top: 4em;
+}
+.key-features h3{
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 400;
+	color: var(--green);
+	margin-bottom: 20px;
+}
+
+.key-features h2{
+	font-size: 28px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.key-features .services-grid p{
+	line-height: 1.5;
+	color: var(--gray);
+	font-size: 12px;
+}
+
+.services-grid{
+	margin-top: 2em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+	justify-items: center;
+}
+
+.service{
+	padding-bottom: 1em;
+}
+
+.service h5{
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+/*Why Choose Us Section*/
+.why-choose-us .why-choose-us-sect{
+	padding: 2em;
+}
+
+.why-choose-us-sect h3{
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 400;
+	color: var(--green);
+	margin-bottom: 5px;
+}
+
+.why-choose-us-sect h2{
+	font-size: 28px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 5px;
+	line-height: 1.2;
+}
+
+.why-choose-us-sect span{
+	color: var(--yellow);
+}
+
+.why-choose-us-sect p{
+	line-height: 1.5;
+	color: var(--gray);
+}
+
+.stats{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+}
+
+.stat{
+	text-align: center;
+	border: solid 1px var(--gray);
+	width: 50%;
+	padding: 1.5em;
+	border-radius: 10px;
+	margin: 1em;
+}
+
+.stat h4{
+	font-size: 22px;
+	font-weight: bold;
+	color: var(--orange);
+	margin-bottom: 15px;
+}
+
+.stat h5{
+	font-size: 12px;
+}
+
+/*About Us*/
+
+.about-us{
+	padding: 2em;
+}
+
+.about-us img{
+	margin-bottom: 2em;
+	max-width: 100%;
+}
+
+.about-us h2{
+	font-size: 28px;
+	font-weight: bold;
+	margin-bottom: 0.75em;
+}
+
+.about-us p{
+	line-height: 1.5;
+	margin-bottom: 2em;
+}
+
+.learn-more-container{
+	text-align: right;
+}
+
+.about-us a{
+	text-decoration: none;
+	background-color: var(--green);
+	padding: 1em 1.2em;
+	color: var(--white);
+	border-radius: 10px;
+}
+
+@media screen and (min-width: 800px){
+	.welcome-sect{
+		height: 80vh;
+		background-position: left center;
+		padding-top: 2em;
+	}
+
+	.welcome-sect h1{
+		font-size: 56px;
+		margin-right: 350px;
+	}
+
+	.welcome-sect p{
+		font-size: 18px;
+		padding-right: 20em;
+	}
+
+	.welcome-sect a{
+		font-size: 22px;
+	}
+
+
+/*	Key Features */
+	.key-features h3{
+		font-size: 22px;
+	}
+
+	.about-us{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-content: space-around;
+		gap: 2em;
+	}
+
+	.about-us img{
+		margin: 0;
+	}
+}
+
+@media screen and (min-width: 1200px){
+
+	.welcome-sect{
+		height: 100vh;
+		padding-top: 6em;
+	}
+
+	.welcome-sect h1{
+		margin-right: 760px;
+	}
+
+	.welcome-sect p{
+		font-size: 20px;
+		margin-right: 500px;
+		margin-top: 1.5em;
+	}
+
+	.call-to-action{
+		margin-top: 7em;
+	}
+
+	.services-grid{
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	.service{
+		padding-top: 2em;
+	}
+
+	.service p{
+		font-size: 27px;
+	}
+
+	/*Why Choose Us*/
+
+	.why-choose-us{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-content: space-evenly;
+		justify-items: left;
+		/*gap: 5em;*/
+	}
+
+	/*.why-choose-us-sect{*/
+	/*	margin-left: 15em;*/
+	/*}*/
+
+	.why-choose-us img{
+		max-width: 100%;
+	}
+
+	.why-choose-us h3,
+	.why-choose-us h2{
+		text-align: left;
+	}
+
+	.stats{
+		justify-items: left;
+
+	}
+
+	.stat{
+		width: 200px;
+	}
+
+	.stat h5{
+		font-size: 18px;
+	}
+
+	.stat h4{
+		font-size: 30px;
+	}
+
+	.learn-more-container{
+		margin-top: 10em;
+	}
+}
