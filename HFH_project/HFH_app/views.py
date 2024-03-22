@@ -34,12 +34,14 @@ def add_eaten_food(request, food_id):
     foodAdded.save()
     foodAdded.foodEaten.add(food)
     foodAdded.save()
-    print('This was the food added')
+    print('This was the food added to list: ')
     print(foodAdded.id)
+    print(foodAdded.foodEaten)
     #foodAdded.foodEaten.add(food)
     #foodAdded.save()
-    #print(food.id)
-    #print(food.name)
+    print("Food item info: ")
+    print(food.id)
+    print(food.name)
     return redirect('calorie_counter')
 
 
