@@ -10,6 +10,7 @@ urlpatterns = [
 
     path('calorie_counter/', views.calorie_counter, name="calorie_counter"),
     path('add_eaten_food/<int:food_id>/', views.add_eaten_food, name='add_eaten_food'),
+    path('delete_eaten_food/<int:food_id>/', views.delete_eaten_food, name='delete_eaten_food'),
 
     path('profile/', views.profile, name="profile"),
     path('login/', views.login, name="login"),

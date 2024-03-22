@@ -30,8 +30,7 @@ def calorie_counter(request):
 
 def add_eaten_food(request, food_id):
     food = models.Food.objects.get(id=food_id)
-    foodAdded = models.FoodsEatenList(id=1)
-    foodAdded.save()
+    foodAdded, created = models.FoodsEatenList.objects.get_or_create(id=1)
     foodAdded.foodEaten.add(food)
     foodAdded.save()
     print('This was the food added to list: ')
@@ -42,6 +41,12 @@ def add_eaten_food(request, food_id):
     print("Food item info: ")
     print(food.id)
     print(food.name)
+    return redirect('calorie_counter')
+
+def delete_eaten_food(request, food_id):
+    food = models.Food.objects.get(id=food_id)
+    foodRemoved = models.FoodsEatenList.objects.get(id=1)
+    foodRemoved.foodEaten.remove(food)
     return redirect('calorie_counter')
 
 
