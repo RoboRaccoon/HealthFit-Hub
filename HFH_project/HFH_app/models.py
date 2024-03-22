@@ -12,9 +12,10 @@ class Food(models.Model):
 
 
 class FoodsEatenList(models.Model):
+    title = models.CharField(max_length=100, default='Test_List')
     foodEaten = models.ManyToManyField(Food)
 
     def __str__(self):
-        return self.foodEaten.name
+        return self.title
 
 

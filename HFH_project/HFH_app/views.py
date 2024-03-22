@@ -30,10 +30,12 @@ def calorie_counter(request):
 
 def add_eaten_food(request, food_id):
     food = models.Food.objects.get(id=food_id)
-    foodAdded = models.FoodsEatenList()
+    foodAdded = models.FoodsEatenList(id=1)
     foodAdded.save()
-    foodAdded.foodEaten.add()
+    foodAdded.foodEaten.add(food)
     foodAdded.save()
+    print('This was the food added')
+    print(foodAdded.id)
     #foodAdded.foodEaten.add(food)
     #foodAdded.save()
     #print(food.id)

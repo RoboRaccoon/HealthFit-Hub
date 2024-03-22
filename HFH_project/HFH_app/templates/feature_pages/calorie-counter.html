@@ -33,7 +33,9 @@
 <ul>
     {% for eaten in foods_eaten %}
     <li>
-        {{ eaten.foodsEaten }}
+        {{ eaten.title }}
+        {{ eaten.id }}
+        {{ eaten.foodEaten }}
     </li>
     {% endfor %}
 </ul>
