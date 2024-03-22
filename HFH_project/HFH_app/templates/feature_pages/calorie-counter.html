@@ -31,12 +31,14 @@
 
 <!-- List of foods that user has -->
 <ul>
-    {% for eaten in foods_eaten %}
     <li>
-        {{ eaten.title }}
-        {{ eaten.id }}
+        {{ foods_eaten.title }}
+        {{ foods_eaten.id }}
+        <br>
+        <p>Your Total Calories are: {{ total_calories }}</p>
+        <br>
          <li>
-            {% for food in eaten.foodEaten.all %}
+            {% for food in foods_eaten.foodEaten.all %}
                 {{ food.name }}
                 <br>
                 {{ food.calories }} Calories
@@ -45,8 +47,10 @@
             {% endfor %}
         </li>
     </li>
-    {% endfor %}
 </ul>
+
+<br>
+<p>Choose the foods you have eaten here:</p>
 
 <!-- The list of available foods -->
 <ul>

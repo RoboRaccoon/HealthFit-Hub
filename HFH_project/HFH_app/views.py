@@ -24,8 +24,13 @@ def calorie_counter(request):
     # get all foods from our database
     retrieved_food_items = models.Food.objects.all()
     # get all eaten foods from database
-    retrieved_eaten_foods = models.FoodsEatenList.objects.all()
-    return render(request, "feature_pages/calorie-counter.html", {'food_items': retrieved_food_items, 'foods_eaten': retrieved_eaten_foods })
+    retrieved_eaten_foods = models.FoodsEatenList.objects.get(id=1)
+    total_calories = 0
+    for food in retrieved_eaten_foods.foodEaten.all():
+        print(food.calories)
+        total_calories += food.calories
+    print(total_calories)
+    return render(request, "feature_pages/calorie-counter.html", {'food_items': retrieved_food_items, 'foods_eaten': retrieved_eaten_foods, 'total_calories': total_calories })
 
 
 def add_eaten_food(request, food_id):
