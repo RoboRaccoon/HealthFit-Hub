@@ -15,8 +15,16 @@ urlpatterns = [
     path('profile/', views.profile, name="profile"),
     path('login/', views.login, name="login"),
     path('sign_up/', views.sign_up, name="sign_up"),
+    path('sign_up_process/', views.sign_up_process, name="sign_up_process"),
+    path('sign_up_done/', views.sign_up_done, name="sign_up_done"),
 
     path('privacy_policy/', views.privacy_policy, name="privacy_policy"),
     path('terms_of_service/', views.terms_of_service, name="terms_of_service"),
+
+    path('dashboard/', views.dashboard, name="dashboard"),
+
+    path('premium/', views.premium, name="premium"),
+
+
 
 ]

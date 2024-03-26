@@ -5,6 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
             <link rel="stylesheet" href="/static/css/style.css">
+            <link rel="stylesheet" href="/static/css/nav+footer.css">
+
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profile</title>
@@ -17,63 +19,230 @@
             <img src="/static/images/logo.png" alt="logo">
         </div>
         <ul>
+
+
+
+
+            ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <li><a href="/ "class = "current">Home</a></li>
             <li><a href="/about_us">About Us</a></li>
             <li><a href="/calorie_counter">Calorie Counter</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="/login" >Login</a></li>
-            <li><a href="/sign_up" >Sign Up</a></li>
             <li><a href="/help">Help</a></li>
         </ul>
     </nav>
 
-<p>
-    This is where the profile will be made.
-</p>
+<!-- Sidebar Navigation -->
+<div id="sidebar" class="sidebar">
+    <button id="sidebarToggle" class="sidebar-toggle">&#9776;</button>
+    <nav class="side-bar-list">
+        <ul>
+            <li><a href="/premium/">What's in Premium?</a></li>
+            <li><a href="/profile/" class="current">Profile</a></li>
+            <li><a href="/calorie_counter/">Calorie Counter</a></li>
+            <li><a href="/dashboard/">Dashboard</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<! -- user-profile -->
+        <div class="welcome-section">
+            <h1>Welcome! User</h1>
+        </div>
+
+<div class="profile-container">
+    <div class="profile-child left-section">
+        <!-- Profile Photo and Credentials Section -->
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="profile-photo">
+                {{ profile_form.photo.label_tag }} {{ profile_form.photo }}
+             <button type="submit" class="upload-pic">upload profile picture</button>
+            </div>
+
+            <div class="form-group">
+                {{ profile_form.name.label_tag }} {{ profile_form.name }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.password.label_tag }} {{ profile_form.password }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.email.label_tag }} {{ profile_form.email }}
+            </div>
+        </form>
+    </div>
+
+    <div class="profile-child right-section">
+        <!-- Personal Information Form -->
+        <form method="POST" enctype="multipart/form-data" class="personal-info-form">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ profile_form.age.label_tag }} {{ profile_form.age }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.height.label_tag }} {{ profile_form.height }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.weight.label_tag }} {{ profile_form.weight }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.gender.label_tag }} {{ profile_form.gender }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.allergy.label_tag }} {{ profile_form.allergy }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.body_fat.label_tag }} {{ profile_form.body_fat }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.current_goal.label_tag }} {{ profile_form.current_goal }}
+            </div>
+            <button type="submit" class="save-changes-btn">Update</button>
+        </form>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
 
 <footer>
-        <div>
+    <div class="footer-container">
+        <div class="footer-section">
             <img src="/static/images/footer-logo.png" alt="place holder image">
-            <p>Eat, Track, Thrive!
-            <br>Fuel Your Wellness Journey</p>
+            <p class="slogan" >Eat, Track, Thrive!<br>Fuel Your Wellness Journey</p>
         </div>
-        <div class="footer-nav">
-            <div>
-                <h3>Information</h3>
+        <div class="footer-section">
+            <h3>Information</h3>
+            <ul>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/about_us">About Us</a></li>
+                <li><a href="/contact_us">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Features</h3>
+            <ul>
+                <li><a href="/calorie_counter">Calorie Counter</a></li>
+                <li>Daily Tracking</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Security</h3>
+            <ul>
+                <li><a href="/terms_of_service">Terms Of Service</a></li>
+                <li><a href="/privacy_policy">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="social-media-section">
+        <span class="social-media">
+            <img src="/static/images/icons/instagram.svg" alt="instagram">
+            <img src="/static/images/icons/x.svg" alt="x">
+            <img src="/static/images/icons/facebook.svg" alt="facebook">
+            <img src="/static/images/icons/linkedin.svg" alt="linkedin">
+        </span>
+        <p>Copyright &copy; 2024 Health Fuel Hub</p>
+    </div>
+</footer>
 
-                <ul>
-                    <li><a href="/profile">Profile</a></li>
-                    <li><a href="/about_us">About Us</a></li>
-                    <li><a href="/contact_us">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>Features</h3>
-                <ul>
-                    <li><a href="/calorie_counter">Calorie Counter</a></li>
-                    <li>Daily Tracking</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Security</h3>
-                <ul>
-                    <li><a href="/terms_of_service">Terms Of Service</a></li>
-                    <li><a href="/privacy_policy">Privacy Policy</a></li>
+<!--javascript for sidebar-->
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarLinks = sidebar.querySelectorAll('a');
 
-                </ul>
-            </div>
-        </div>
-        <hr>
-        <div>
-            <span class="social-media">
-                <img src="/static/images/icons/instagram.svg" alt="instagram">
-                <img src="/static/images/icons/x.svg" alt="x">
-                <img src="/static/images/icons/facebook.svg" alt="facebook">
-                <img src="/static/images/icons/linkedin.svg" alt="linkedin">
-            </span>
-            <p>Copyright &copy; 2024 Health Fuel Hub</p>
-        </div>
-    </footer>
+    sidebarToggle.addEventListener('click', () => {
+        if (sidebar.style.left === '0px') {
+            sidebar.style.left = '-250px'; // Hide sidebar
+            sidebarLinks.forEach(link => link.classList.add('hidden-text'));
+        } else {
+            sidebar.style.left = '0px'; // Show sidebar
+            sidebarLinks.forEach(link => link.classList.remove('hidden-text'));
+        }
+    });
+
+
+    sidebarLinks.forEach(link => link.classList.add('hidden-text'));
+</script>
 
 </body>
 </html>

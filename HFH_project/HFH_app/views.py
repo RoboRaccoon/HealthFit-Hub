@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import ProfileInfoForm, ProfileForm
 from . import models
 from django.shortcuts import redirect
 
@@ -21,6 +22,7 @@ def help(request):
 
 
 def calorie_counter(request):
+
     # get all foods from our database
     retrieved_food_items = models.Food.objects.all()
     # get all eaten foods from database
@@ -54,9 +56,24 @@ def delete_eaten_food(request, food_id):
     foodRemoved.foodEaten.remove(food)
     return redirect('calorie_counter')
 
-
+  
 def profile(request):
-    return render(request, "Login_pages/profile.html")
+    if request.method == 'POST':
+        infoForm = ProfileInfoForm(request.POST)
+        if infoForm.is_valid():
+            age = infoForm.cleaned_data['age']
+            gender = infoForm.cleaned_data['gender']
+            weight = infoForm.cleaned_data['weight']
+            height = infoForm.cleaned_data['height']
+            print(age, gender, weight, height)
+            profile_instance = infoForm.save()
+            print('Profile saved:', profile_instance)
+        else:
+            print(infoForm.errors)
+        return render(request, 'user-dashboard/dashboard.html', {'profile_form': infoForm})
+    else:
+        form = ProfileForm()
+        return render(request, 'Login_pages/profile.html', {'profile_form': form})
 
 
 def login(request):
@@ -67,6 +84,14 @@ def sign_up(request):
     return render(request, 'Login_pages/sign_up.html')
 
 
+def sign_up_process(request):
+    return render(request, 'Login_pages/sign_up_process.html')
+
+
+def sign_up_done(request):
+    return render(request, 'Login_pages/sign_up_done.html')
+
+
 def privacy_policy(request):
     return render(request, 'legal_pages/privacy_policy.html')
 
@@ -75,7 +100,14 @@ def terms_of_service(request):
     return render(request, 'legal_pages/terms_of_service.html')
 
 
-# buttons doesn't work yet
+def dashboard(request):
+    return render(request, "user-dashboard/dashboard.html")
+
+  
+def premium(request):
+    return render(request, "user-dashboard/premium.html")
+
+
 # request to make new account
 def get_started(request):
     return render(request, 'home_page/index.html')

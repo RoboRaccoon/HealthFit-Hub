@@ -1,0 +1,79 @@
+:root{
+    --border-radius: 25px;
+    --blue: #1C2D3D;
+    --yellow: #F2AF29;
+    --green: #72B480;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: Poppins;
+    /*width: 85%;*/
+    /*margin: auto;*/
+    line-height: 1;
+}
+.WelcomeText{
+    margin-top: 70px; /* Add margin to the top */
+    margin-bottom: -10px; /* Add margin at the bottom to separate from the next element */
+    font-size: 40px; /* Change the font size to your desired value */
+    font-weight: bold;
+}
+
+.loginText{
+    font-size: 23px; /* Change the font size to your desired value */
+    font-weight: bold;
+}
+
+.infoText{
+    font-size: 14px; /* Change the font size to your desired value */
+    padding-bottom: 50px; /* Adjust the padding as needed */
+}
+.large-button {
+    border-radius: 10px;
+    font-size: 23px;
+    padding: 7px;
+}
+
+.submitButton{
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.main {
+    font-size: 23px; /* Change the font size to your desired value */
+    line-height:1.5;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Align text to the center */
+}
+
+form input[type="text"]{
+        width: 100%;
+        font-size: 19px; /* Change the font size to your desired value */
+        margin: 5px 0;
+            margin-bottom: 10px;
+
+}
+form input[type="password"]{
+        width: 100%;
+        font-size: 19px; /* Change the font size to your desired value */
+        margin: 5px 0;
+    margin-bottom: 10px;
+
+}
+form input[type="checkbox"]{
+        margin: 5px 0;
+            margin-bottom: 10px;
+
+}
+form input[type="submit"] {
+        margin: 5px 0;
+        margin-bottom: 10px;
+        font-size: 23px;
+        padding: 5px;
+        border-radius:10px;
+}
+
+/* Adding styles to navigation to match with mobile mockup  */

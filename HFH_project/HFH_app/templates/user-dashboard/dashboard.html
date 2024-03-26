@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <link rel="stylesheet" href="/static/css/style.css">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+</head>
+
+<body>
+<!--Navigation-->
+
+    <nav class="nav-list container">
+        <div>
+            <img src="/static/images/logo.png" alt="logo">
+        </div>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="food-tracker.html">Food Tracker</a></li>
+        </ul>
+    </nav>
+
+<!-- Sidebar Navigation -->
+<div id="sidebar" class="sidebar">
+    <button id="sidebarToggle" class="sidebar-toggle">&#9776;</button>
+    <nav class="side-bar-list">
+        <ul>
+            <li><a href="/premium/">What's in Premium?</a></li>
+            <li><a href="/profile/" class="current">Profile</a></li>
+            <li><a href="/calorie_counter/">Calorie Counter</a></li>
+            <li><a href="/dashboard/">Dashboard</a></li>
+        </ul>
+    </nav>
+</div>
+
+ <div class="profile-child right-section">
+        <!-- Personal Information Form -->
+        <form method="POST" enctype="multipart/form-data" class="personal-info-form">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ profile_form.age.label_tag }} {{ profile_form.age }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.height.label_tag }} {{ profile_form.height }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.weight.label_tag }} {{ profile_form.weight }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.gender.label_tag }} {{ profile_form.gender }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.allergy.label_tag }} {{ profile_form.allergy }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.body_fat.label_tag }} {{ profile_form.body_fat }}
+            </div>
+            <div class="form-group">
+                {{ profile_form.current_goal.label_tag }} {{ profile_form.current_goal }}
+            </div>
+        </form>
+    </div>
+
+
+<!--javascript for sidebar-->
+<script>
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarLinks = sidebar.querySelectorAll('a');
+
+    sidebarToggle.addEventListener('click', () => {
+        if (sidebar.style.left === '0px') {
+            sidebar.style.left = '-250px'; // Hide sidebar
+            sidebarLinks.forEach(link => link.classList.add('hidden-text'));
+        } else {
+            sidebar.style.left = '0px'; // Show sidebar
+            sidebarLinks.forEach(link => link.classList.remove('hidden-text'));
+        }
+    });
+
+    sidebarLinks.forEach(link => link.classList.add('hidden-text'));
+</script>
+
+
+</body>
+</html>

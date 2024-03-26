@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-            <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/sign_up.css">
+
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title</title>
@@ -13,65 +14,96 @@
 
     <nav class="nav-list container">
         <div>
-            <img src="/static/images/logo.png" alt="logo">
+            <img  src="/static/images/logo.png" alt="logo">
         </div>
         <ul>
             <li><a href="/ ">Home</a></li>
             <li><a href="/about_us">About Us</a></li>
             <li><a href="/calorie_counter">Calorie Counter</a></li>
-            <li><a href="#">Dashboard</a></li>
+
+            <li><a href="/premium/">Premium</a></li>
             <li><a href="/login" >Login</a></li>
             <li><a href="/sign_up" class = "current">Sign Up</a></li>
             <li><a href="/help">Help</a></li>
         </ul>
     </nav>
 
-<p>
-    This is where the sign up will be made.
-</p>
+    <div class="main">
+    <h3 class="WelcomeText">Welcome</h3>
+        <div class="loginText">
+            <p> Already have an account? Log in</p>
+        </div>
+    <form>
+        <lable class="formText" for="Username">  Username </lable> <br>
+        <input type="text" id="Username" name="Username" required> <br>
+
+        <lable class="formText" for="Email">  Email </lable> <br>
+        <input type="text" id="Email" name="Email" required> <br>
+
+        <lable class="formText" for="Password">  Password </lable> <br>
+        <input type="text" id="Password" name="Password" required> <br>
+
+        <lable class="formText" for="Confirm Password">  Confirm Password </lable> <br>
+        <input type="text" id="Confirm Password" name="Confirm Password" required> <br>
+
+        <div class="submitButton">
+            <input class="formText" type="checkbox" id="termsOfService" name="termsOfService" value="Terms" required>
+            <label for="termsOfService"> I agree to the Terms of Service </label><br>
+        </div>
+
+        <input class="formText" class="large-button" type="Submit" value="Register" required>
+
+    </form>
+
+        <div class="infoText">
+        <p> Privacy Policy </p>
+        <p> Terms of Service </p>
+        <p> © 2024 Health Fuel Hub </p>
+        </div>
+    </div>
+  
+
 <footer>
-        <div>
+    <div class="footer-container">
+        <div class="footer-section">
             <img src="/static/images/footer-logo.png" alt="place holder image">
-            <p>Eat, Track, Thrive!
-            <br>Fuel Your Wellness Journey</p>
+            <p class="slogan" >Eat, Track, Thrive!<br>Fuel Your Wellness Journey</p>
         </div>
-        <div class="footer-nav">
-            <div>
-                <h3>Information</h3>
+        <div class="footer-section">
+            <h3>Information</h3>
+            <ul>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/about_us">About Us</a></li>
+                <li><a href="/contact_us">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Features</h3>
+            <ul>
+                <li><a href="/calorie_counter">Calorie Counter</a></li>
+                <li>Daily Tracking</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Security</h3>
+            <ul>
+                <li><a href="/terms_of_service">Terms Of Service</a></li>
+                <li><a href="/privacy_policy">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="social-media-section">
+        <span class="social-media">
+            <img src="/static/images/icons/instagram.svg" alt="instagram">
+            <img src="/static/images/icons/x.svg" alt="x">
+            <img src="/static/images/icons/facebook.svg" alt="facebook">
+            <img src="/static/images/icons/linkedin.svg" alt="linkedin">
+        </span>
+        <p>Copyright &copy; 2024 Health Fuel Hub</p>
+    </div>
+</footer>
 
-                <ul>
-                    <li><a href="/profile">Profile</a></li>
-                    <li><a href="/about_us">About Us</a></li>
-                    <li><a href="/contact_us">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>Features</h3>
-                <ul>
-                    <li><a href="/calorie_counter">Calorie Counter</a></li>
-                    <li>Daily Tracking</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Security</h3>
-                <ul>
-                    <li><a href="/terms_of_service">Terms Of Service</a></li>
-                    <li><a href="/privacy_policy">Privacy Policy</a></li>
-
-                </ul>
-            </div>
-        </div>
-        <hr>
-        <div>
-            <span class="social-media">
-                <img src="/static/images/icons/instagram.svg" alt="instagram">
-                <img src="/static/images/icons/x.svg" alt="x">
-                <img src="/static/images/icons/facebook.svg" alt="facebook">
-                <img src="/static/images/icons/linkedin.svg" alt="linkedin">
-            </span>
-            <p>Copyright &copy; 2024 Health Fuel Hub</p>
-        </div>
-    </footer>
 
 </body>
 </html>

@@ -1,0 +1,206 @@
+:root{
+    --border-radius: 25px;
+    --blue: #1C2D3D;
+    --yellow: #F2AF29;
+    --green: #72B480;
+    --white: #FFFFFF;
+}
+
+
+body {
+    font-family: Poppins;
+    /*width: 85%;*/
+    /*margin: auto;*/
+    line-height: 1;
+}
+.WelcomeText{
+    margin-top: 70px; /* Add margin to the top */
+    margin-bottom: -10px; /* Add margin at the bottom to separate from the next element */
+    font-size: 40px; /* Change the font size to your desired value */
+    font-weight: bold;
+}
+
+.loginText{
+    font-size: 23px; /* Change the font size to your desired value */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.forgotPass{
+    font-size: 17px; /* Change the font size to your desired value */
+}
+
+.infoText{
+    font-size: 14px; /* Change the font size to your desired value */
+    padding-bottom: 50px; /* Adjust the padding as needed */
+}
+.large-button {
+    border-radius: 10px;
+    font-size: 23px;
+    padding: 7px;
+}
+
+.submitButton{
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.main {
+    font-size: 23px; /* Change the font size to your desired value */
+    line-height:1.5;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Align text to the center */
+}
+
+form input[type="text"]{
+        width: 100%;
+        font-size: 19px; /* Change the font size to your desired value */
+        margin: 5px 0;
+            margin-bottom: 10px;
+
+}
+form input[type="password"]{
+        width: 100%;
+        font-size: 19px; /* Change the font size to your desired value */
+        margin: 5px 0;
+    margin-bottom: 10px;
+
+}
+
+form input[type="submit"] {
+        margin: 5px 0;
+        margin-bottom: 10px;
+        font-size: 23px;
+        padding: 5px;
+        border-radius:10px;
+}
+
+
+
+
+
+
+
+.nav-list{
+    display: flex;
+    flex-grow: 2;
+
+    justify-content: space-between; /* Align items with equal space between them */
+    align-items: center; /* Vertically center items */
+    text-align: center;
+
+    background-color: var(--blue);
+    /*padding: 1em;*/
+}
+
+/* Adding padding to Nav to give more spacing */
+.nav-list ul li{
+	padding: .5em;
+    display: flex;
+    align-items: center;
+}
+
+/* add nav styles to make it more readable */
+.nav-list a,
+.nav-list a:link,
+.nav-list a:visited{
+    display: flex;
+	text-decoration: none;
+	color: var(--white);
+	text-transform: uppercase;
+	font-weight: bold;
+    font-size: 16px; /* Adjust to your desired font size */
+
+}
+
+.nav-list ul{
+    display: flex;
+	text-decoration: none;
+    list-style-type: none; /* Makes the marker invisible for unordered lists */
+    gap:15px; /* Controls the space between flex items vertically */
+    padding-top: 5px ;
+    padding-bottom: 5px ;
+    padding-left:60px ;
+    width: 80%;
+    font-size: 10px;
+    margin-left: auto; /* Push the items to the right */
+}
+
+/* Adding hover and skew animation to navigation for better user interaction */
+.nav-list a:hover,
+.nav-list a:focus,
+.nav-list a.current{
+	font-weight: bold;
+	color: var(--yellow);
+	text-transform: uppercase;
+}
+
+img{
+	max-width: 70%;
+	height: auto;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: var(--blue);
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+.slogan{
+    color: white;
+    font-size: 12px;
+}
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section:last-child {
+    margin-right: 0;
+}
+
+.footer-section h3 {
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-media-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.social-media-section img {
+    margin-right: 10px;
+}
