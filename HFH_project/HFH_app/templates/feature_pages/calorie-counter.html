@@ -29,6 +29,43 @@
     This is where the calorie counter will be made.
 </p>
 
+<!-- List of foods that user has -->
+<ul>
+    <li>
+        {{ foods_eaten.title }}
+        {{ foods_eaten.id }}
+        <br>
+        <p>Your Total Calories are: {{ total_calories }}</p>
+        <br>
+         <li>
+            {% for food in foods_eaten.foodEaten.all %}
+                {{ food.name }}
+                <br>
+                {{ food.calories }} Calories
+                <br>
+                <a href="{% url 'delete_eaten_food' food.id %}">Delete</a>
+            {% endfor %}
+        </li>
+    </li>
+</ul>
+
+<br>
+<p>Choose the foods you have eaten here:</p>
+
+<!-- The list of available foods -->
+<ul>
+{% for food in food_items %}
+    <li>
+        {{ food.name }}
+        <br>
+        {{ food.calories }} Calories
+        <br>
+        <a href="{% url 'add_eaten_food' food.id %}">Add to Eaten</a>
+        <br>
+    </li>
+{% endfor %}
+</ul>
+
 <footer>
         <div>
             <img src="/static/images/footer-logo.png" alt="place holder image">

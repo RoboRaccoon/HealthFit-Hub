@@ -22,9 +22,41 @@ def help(request):
 
 
 def calorie_counter(request):
-    return render(request, "feature_pages/calorie-counter.html")
+
+    # get all foods from our database
+    retrieved_food_items = models.Food.objects.all()
+    # get all eaten foods from database
+    retrieved_eaten_foods = models.FoodsEatenList.objects.get(id=1)
+    total_calories = 0
+    for food in retrieved_eaten_foods.foodEaten.all():
+        print(food.calories)
+        total_calories += food.calories
+    print(total_calories)
+    return render(request, "feature_pages/calorie-counter.html", {'food_items': retrieved_food_items, 'foods_eaten': retrieved_eaten_foods, 'total_calories': total_calories })
 
 
+def add_eaten_food(request, food_id):
+    food = models.Food.objects.get(id=food_id)
+    foodAdded, created = models.FoodsEatenList.objects.get_or_create(id=1)
+    foodAdded.foodEaten.add(food)
+    foodAdded.save()
+    print('This was the food added to list: ')
+    print(foodAdded.id)
+    print(foodAdded.foodEaten)
+    #foodAdded.foodEaten.add(food)
+    #foodAdded.save()
+    print("Food item info: ")
+    print(food.id)
+    print(food.name)
+    return redirect('calorie_counter')
+
+def delete_eaten_food(request, food_id):
+    food = models.Food.objects.get(id=food_id)
+    foodRemoved = models.FoodsEatenList.objects.get(id=1)
+    foodRemoved.foodEaten.remove(food)
+    return redirect('calorie_counter')
+
+  
 def profile(request):
     if request.method == 'POST':
         infoForm = ProfileInfoForm(request.POST)
@@ -71,29 +103,9 @@ def terms_of_service(request):
 def dashboard(request):
     return render(request, "user-dashboard/dashboard.html")
 
-
+  
 def premium(request):
     return render(request, "user-dashboard/premium.html")
-
-
-def add_eaten_food(request, food_id):
-    food = models.Food.objects.get(id=food_id)
-    foodAdded = models.FoodsEatenList(id=1)
-    foodAdded.save()
-    foodAdded.foodEaten.add(food)
-    foodAdded.save()
-    print('This was the food added to list: ')
-    print(foodAdded.id)
-    print(foodAdded.foodEaten)
-    # foodAdded.foodEaten.add(food)
-    # foodAdded.save()
-    print("Food item info: ")
-    print(food.id)
-    print(food.name)
-    return redirect('calorie_counter')
-
-
-# buttons doesn't work yet
 
 
 # request to make new account
